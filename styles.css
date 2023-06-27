@@ -16,7 +16,7 @@ body{
     height: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .card{
     padding: 10px;
@@ -29,15 +29,23 @@ body{
     align-items: center;
     justify-content: space-evenly;
 }
+h2{
+    font-size: 30px;
+    margin: 10px;
+}
+h6{
+    font-size: 20px;
+    font-weight: 200;
+    margin: 10px;
+}
 .card>h4{
     font-size: 5rem;
     font-weight: 500;
-    margin: 0;
+    margin: 10px;
     padding: 0;
 }
-img>#icon{
-    width: 20%;
-    background-color: aliceblue;
+#icon{
+    width: 15%;
 }
 #weather{
     text-transform: capitalize;
