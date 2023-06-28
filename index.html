@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima&family=Encode+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./jquery.js"></script>
+    <script src="./index.js"></script>
     <title>Check Weather</title>
 </head>
 <body>
@@ -20,29 +22,5 @@
             <button onclick="window.location.reload()" id="refresh"><i class="bi bi-arrow-clockwise"></i></i></button>
         </div>
     </div>
-<script src="./jquery.js"></script>
-<script>
-    link ="https://api.openweathermap.org/data/2.5/weather?q=bishnupur&appid=e849931cbdc85f21a99a512497dabd45";
-    var request= new XMLHttpRequest();
-    request.open('GET',link,true);
-    request.onload=function(){
-        var obj=JSON.parse(this.response);
-        console.log(obj)
-        document.getElementById('icon').src="https://openweathermap.org/img/w/"+obj.weather[0].icon+".png";
-        document.getElementById('weather').innerHTML=obj.weather[0].description;
-        document.getElementById('location').innerHTML=obj.name;
-        document.getElementById('temp').innerHTML=Math.round (obj.main.temp-273.15);
-        document.getElementById('icon').style.display="block";
-        document.getElementById('weather').style.display="block";
-        document.getElementById('location-h2').style.display="block";
-        document.getElementById('temp-h4').style.display="block";
-    }
-    if(request.status>=200 && request.status<400){
-        var temp=obj.main.temp;
-    }else{
-        console.log("City Data Unavailable");
-    }
-    request.send();
-</script>
 </body>
 </html>
