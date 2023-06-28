@@ -3,6 +3,11 @@ var request= new XMLHttpRequest();
 request.open('GET',link,true);
 request.onload=function(){
     var obj=JSON.parse(this.response);
+    if(obj.cod==404){
+        document.getElementById('location-h2').innerText="Enter valid city name 🤦🏻‍♂️";
+        document.getElementById('location-h2').style.display="block";
+        return 0;
+    }
     console.log(obj)
     document.getElementById('icon').src="https://openweathermap.org/img/w/"+obj.weather[0].icon+".png";
     document.getElementById('weather').innerHTML=obj.weather[0].description;
@@ -12,10 +17,5 @@ request.onload=function(){
     document.getElementById('weather').style.display="block";
     document.getElementById('location-h2').style.display="block";
     document.getElementById('temp-h4').style.display="block";
-}
-if(request.status>=200 && request.status<400){
-    var temp=obj.main.temp;
-}else{
-    console.log("City Data Unavailable");
 }
 request.send();
