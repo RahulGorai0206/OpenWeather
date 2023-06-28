@@ -109,3 +109,8 @@ h6{
         width: 80%;
     }
 }
+@media only screen and (max-width: 500px) {
+    .container.searchDiv{
+        width: 100%;
+    }
+}

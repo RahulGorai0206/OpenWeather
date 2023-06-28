@@ -24,7 +24,21 @@ document.getElementById("refresh").onclick=function(){
                 document.getElementById('location-h2').style.display="block";
                 return 0;
             }else{
-                document.getElementById('icon').src="https://openweathermap.org/img/w/"+obj.weather[0].icon+".png";
+                        if(obj.weather[0].main=='Clouds'){
+                            document.getElementById('icon').src="./images/clouds.png";
+                        }else if(obj.weather[0].main=='Rain'){
+                            document.getElementById('icon').src="./images/rain.png";
+                        }else if(obj.weather[0].main=='Clear'){
+                            document.getElementById('icon').src="./images/clear.png";
+                        }else if(obj.weather[0].main=='Drizzle'){
+                            document.getElementById('icon').src="./images/drizzle.png";
+                        }else if(obj.weather[0].main=='Mist'){
+                            document.getElementById('icon').src="./images/mist.png";
+                        }else if(obj.weather[0].main=='Snow'){
+                            document.getElementById('icon').src="./images/snow.png";
+                        }else if(obj.weather[0].main=='Thunderstorm'){
+                            document.getElementById('icon').src="./images/thunder.png";
+                        }
                 document.getElementById('weather').innerHTML=obj.weather[0].description;
                 console.log(obj)
                 document.getElementById('location-h2').innerText=obj.name;
