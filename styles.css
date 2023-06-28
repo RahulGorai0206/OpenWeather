@@ -63,7 +63,6 @@ textarea:focus, input:focus{
 h2{
     font-size: 30px;
     margin: 10px;
-    display: none;
 }
 h6{
     font-size: 20px;
@@ -99,6 +98,7 @@ h6{
 #refresh:hover{
     box-shadow: inset 5px 5px 10px #191b1b, inset -5px -5px 10px #595959;
 }
+#icon-loc{display: none;}
 @media only screen and (max-width: 1000px) {
     .container{
         width: 60%;
