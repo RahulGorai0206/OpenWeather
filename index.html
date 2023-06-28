@@ -13,9 +13,9 @@
 <body>
     <div class="container">
         <div class="card">
-            <h2><i class="bi bi-geo-alt-fill"></i><span id="location"></span></h2>
+            <h2 id="location-h2"><i class="bi bi-geo-alt-fill"></i><span id="location"></span></h2>
             <h6 id="weather"></h6>
-            <h4><span id="temp"></span><sup>o</sup>C</h4>
+            <h4 id="temp-h4"><span id="temp"></span><sup>o</sup>C</h4>
             <img src="" id="icon">
             <button onclick="window.location.reload()" id="refresh"><i class="bi bi-arrow-clockwise"></i></i></button>
         </div>
@@ -32,6 +32,10 @@
         document.getElementById('weather').innerHTML=obj.weather[0].description;
         document.getElementById('location').innerHTML=obj.name;
         document.getElementById('temp').innerHTML=Math.round (obj.main.temp-273.15);
+        document.getElementById('icon').style.display="block";
+        document.getElementById('weather').style.display="block";
+        document.getElementById('location-h2').style.display="block";
+        document.getElementById('temp-h4').style.display="block";
     }
     if(request.status>=200 && request.status<400){
         var temp=obj.main.temp;
