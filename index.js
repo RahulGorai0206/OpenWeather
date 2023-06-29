@@ -9,7 +9,7 @@ document.getElementById("refresh").onclick=function(){
     document.querySelector('.other').style.display="none";
         if (navigator.onLine) {
         async function fetchDetails(){
-            link ="https://api.openweathermap.org/data/2.5/weather?q=loo&appid=e849931cbdc85f21a99a512497dabd45";
+            link ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e849931cbdc85f21a99a512497dabd45";
             const response=await fetch(link)
             var obj= await response.json();
             // console.log(obj)
