@@ -6,9 +6,10 @@ document.getElementById("refresh").onclick=function(){
     document.getElementById('location-h2-1').style.display="block";
     document.getElementById('temp-h4').style.display="none";
     document.getElementById('feel-temp-h4').style.display="none";
+    document.querySelector('.other').style.display="none";
         if (navigator.onLine) {
         async function fetchDetails(){
-            link ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e849931cbdc85f21a99a512497dabd45";
+            link ="https://api.openweathermap.org/data/2.5/weather?q=loo&appid=e849931cbdc85f21a99a512497dabd45";
             const response=await fetch(link)
             var obj= await response.json();
             // console.log(obj)
@@ -45,12 +46,15 @@ document.getElementById("refresh").onclick=function(){
                 document.getElementById('location-h2').innerText=obj.name;
                 document.getElementById('temp').innerHTML=Math.round (obj.main.temp-273.15);
                 document.getElementById('feel-temp').innerHTML=Math.round (obj.main.feels_like-273.15);
+                document.getElementById('wind').innerHTML=obj.wind.speed+" ";
+                document.getElementById('hum').innerHTML=obj.main.humidity;
                 document.getElementById('icon').style.display="block";
                 document.getElementById('weather').style.display="block";
                 document.getElementById('location-h2').style.display="block";
                 document.getElementById('location-h2-1').style.display="none";
                 document.getElementById('temp-h4').style.display="block";
                 document.getElementById('feel-temp-h4').style.display="block";
+                document.querySelector('.other').style.display="flex";
             }
         }
         fetchDetails()
