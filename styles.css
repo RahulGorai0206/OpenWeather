@@ -84,6 +84,7 @@ textarea:focus, input:focus{
 }
 h2{
     font-size: 30px;
+    font-weight: 200;
     margin: 10px;
 }
 h6{
@@ -193,6 +194,20 @@ h5{
     }
 }
 @media only screen and (max-width: 400px) {
+    .searchDiv{
+        width: 90%;
+    }
+    .searchDiv:hover{
+        width: 80%;
+        height: 10%;
+        transition: 0.5s;
+    }
+    .container{
+        width: 90%;
+    }
+    h2{
+        font-size: 20px;
+    }
     .container.searchDiv{
         width: 100%;
     }
