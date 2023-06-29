@@ -40,6 +40,7 @@ textarea:focus, input:focus{
 }
 #searchBox:hover{
     font-size: 25px;
+    box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
     transition: 0.5s;
 }
 .container{
