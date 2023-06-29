@@ -13,16 +13,37 @@ body{
     flex-direction: column;
 }
 .searchDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
     width: 30%;
     height: 8%;
     transition: 0.5s;
+}
+#searchBtn{
+    width: 15%;
+    height: 100%;
+    background-color: #343434;
+    box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
+    border: none;
+    border-radius: 50px;
+    color: rgb(134, 134, 134);
+    font-size: 20px;
+}
+#searchBtn:hover{
+    box-shadow: inset 5px 5px 10px #191b1b, inset -5px -5px 10px #595959;
+
 }
 /* For removing border in input box while active */
 textarea:focus, input:focus{ 
     outline: none;
 }
+#ion{
+    font-size: 40px;
+}
 #searchBox{
-    width: 100%;
+    width: 80%;
     height: 100%;
     font-size: 20px;
     color: rgb(134, 134, 134);
@@ -167,8 +188,11 @@ h5{
         height: 10%;
         transition: 0.5s;
     }
+    #ion{
+        font-size: 20px;
+    }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
     .container.searchDiv{
         width: 100%;
     }
@@ -184,6 +208,9 @@ h5{
         padding: 0;
         display: none;
     }
+    #ion{
+        font-size: 20px;
+    }
     #other-img{
         width: 35px;
     }
@@ -192,5 +219,8 @@ h5{
     }
     #wind{
         font-size: 20px;
+    }
+    #searchBtn{
+        width: 15%;
     }
 }

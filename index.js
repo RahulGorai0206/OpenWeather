@@ -1,4 +1,4 @@
-document.getElementById("refresh").onclick=function(){
+document.getElementById("searchBtn").onclick=function(){
     var city=document.getElementById('searchBox').value;
     document.getElementById('icon').style.display="none";
     document.getElementById('weather').style.display="none";
