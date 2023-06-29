@@ -5,6 +5,7 @@ document.getElementById("refresh").onclick=function(){
     document.getElementById('location-h2').style.display="none";
     document.getElementById('location-h2-1').style.display="block";
     document.getElementById('temp-h4').style.display="none";
+    document.getElementById('feel-temp-h4').style.display="none";
         if (navigator.onLine) {
         async function fetchDetails(){
             link ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e849931cbdc85f21a99a512497dabd45";
@@ -43,11 +44,13 @@ document.getElementById("refresh").onclick=function(){
                 console.log(obj)
                 document.getElementById('location-h2').innerText=obj.name;
                 document.getElementById('temp').innerHTML=Math.round (obj.main.temp-273.15);
+                document.getElementById('feel-temp').innerHTML=Math.round (obj.main.feels_like-273.15);
                 document.getElementById('icon').style.display="block";
                 document.getElementById('weather').style.display="block";
                 document.getElementById('location-h2').style.display="block";
                 document.getElementById('location-h2-1').style.display="none";
                 document.getElementById('temp-h4').style.display="block";
+                document.getElementById('feel-temp-h4').style.display="block";
             }
         }
         fetchDetails()
