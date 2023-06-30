@@ -62,10 +62,18 @@ function getLinkViaSearch(){
     link ="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e849931cbdc85f21a99a512497dabd45";
     fetchDetailsViaSearch()
 }
+function getLinkViaLocation(lat , long){
+    link ="https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&appid=e849931cbdc85f21a99a512497dabd45";
+    fetchDetailsViaSearch()
+}
 const input = document.getElementById("searchBox");
 input.addEventListener("keyup", (event) => {
   if (event.key === "Enter") {
     getLinkViaSearch();
   }
 });
-document.getElementById("searchBtn").onclick=function(){}
+document.getElementById("searchBtn").onclick=function(){
+    navigator.geolocation.getCurrentPosition((position) => {
+        getLinkViaLocation(position.coords.latitude, position.coords.longitude);
+    });
+}
