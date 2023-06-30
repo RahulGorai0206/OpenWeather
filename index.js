@@ -16,41 +16,27 @@ function setImages(obj){
     }
 }
 function setDetails(obj){
-    document.getElementById('icon').style.display="none";
-    document.getElementById('weather').style.display="none";
-    document.getElementById('location-h2').style.display="none";
-    document.getElementById('location-h2-1').style.display="block";
-    document.getElementById('temp-h4').style.display="none";
-    document.getElementById('feel-temp-h4').style.display="none";
-    document.querySelector('.other').style.display="none";
+    document.getElementById("searchDiv").style.display="none";
     document.getElementById('weather').innerHTML=obj.weather[0].description;
     document.getElementById('location-h2').innerText=obj.name;
     document.getElementById('temp').innerHTML=Math.round (obj.main.temp-273.15);
     document.getElementById('feel-temp').innerHTML=Math.round (obj.main.feels_like-273.15);
     document.getElementById('wind').innerHTML=obj.wind.speed+" ";
     document.getElementById('hum').innerHTML=obj.main.humidity;
-    document.getElementById('icon').style.display="block";
-    document.getElementById('weather').style.display="block";
-    document.getElementById('location-h2').style.display="block";
-    document.getElementById('location-h2-1').style.display="none";
-    document.getElementById('temp-h4').style.display="block";
-    document.getElementById('feel-temp-h4').style.display="block";
-    document.querySelector('.other').style.display="flex";
+    document.getElementById('container').style.display="block";
 }
 async function fetchDetailsViaSearch(){
     const response=await fetch(link)
     var obj= await response.json();
     if(obj.cod==404){
-        document.getElementById('location-h2').innerText="Enter valid city name 🤦🏻‍♂️";
-        document.getElementById('location-h2-1').style.display="none";
-        document.getElementById('location-h2').style.display="block";
+        document.getElementById('errorBox').innerText="Enter valid city name 🤦🏻‍♂️";
+        document.getElementById('errorBox').style.display="block";
 
         return 0;
     }
     else if(obj.cod==400){
-        document.getElementById('location-h2').innerText="Enter any city name 🤦🏻‍♂️";
-        document.getElementById('location-h2-1').style.display="none";
-        document.getElementById('location-h2').style.display="block";
+        document.getElementById('errorBox').innerText="Enter any city name 🤦🏻‍♂️";
+        document.getElementById('errorBox').style.display="block";
         return 0;
     }else{
         setImages(obj);

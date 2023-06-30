@@ -15,14 +15,14 @@
     <title>Check Weather</title>
 </head>
 <body>
-    <div class="searchDiv">
+    <div class="searchDiv" id="searchDiv">
         <input type="text" id="searchBox" placeholder="&#xF002; Search City" style="font-family:Arial, FontAwesome">
         <p>Or Get Via Device Location</p>
         <button id="searchBtn"><ion-icon  id="ion" name="location-sharp"></ion-icon></button>
+        <h2 id="errorBox">Enter City Name</span></h2>
     </div>
-    <div class="container">
+    <div class="container" id="container">
         <div class="card">
-            <h2 id="location-h2-1">Enter City Name</span></h2>
             <h2 id="location-h2"></h2>
             <h6 id="weather"></h6>
             <h4 id="temp-h4"><span id="temp"></span><sup>o</sup>C</h4>
