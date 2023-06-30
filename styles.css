@@ -79,7 +79,6 @@ textarea:focus, input:focus{
 }
 .card{
     padding: 10px;
-    width: 100%;
     border-radius: 50px;
     background-color: #343434;
     box-shadow: 5px 5px 10px #191b1b, -5px -5px 10px #595959;
@@ -170,43 +169,20 @@ h5{
     .container,.searchDiv{
         width: 60%;
     }
-    .searchDiv:hover{
-        width: 65%;
-        height: 10%;
-        transition: 0.5s;
-    }
 }
 @media only screen and (max-width: 1000px) {
     .container,.searchDiv{
         width: 60%;
-    }
-    .searchDiv:hover{
-        width: 65%;
-        height: 10%;
-        transition: 0.5s;
     }
 }
 @media only screen and (max-width: 500px) {
     .container.searchDiv{
         width: 80%;
     }
-    .searchDiv:hover{
-        width: 85%;
-        height: 10%;
-        transition: 0.5s;
-    }
-    #ion{
-        font-size: 20px;
-    }
 }
 @media only screen and (max-width: 400px) {
     .searchDiv{
         width: 90%;
-    }
-    .searchDiv:hover{
-        width: 80%;
-        height: 10%;
-        transition: 0.5s;
     }
     .container{
         width: 90%;
@@ -217,20 +193,12 @@ h5{
     .container.searchDiv{
         width: 100%;
     }
-    .searchDiv:hover{
-        width: 80%;
-        height: 10%;
-        transition: 0.5s;
-    }
     .card>h4{
         font-size: 3rem;
         font-weight: 500;
         margin: 10px;
         padding: 0;
         display: none;
-    }
-    #ion{
-        font-size: 20px;
     }
     #other-img{
         width: 35px;
@@ -242,6 +210,6 @@ h5{
         font-size: 20px;
     }
     #searchBtn{
-        width: 15%;
+        width: 25%;
     }
 }
