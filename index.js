@@ -13,6 +13,8 @@ function setImages(obj){
         document.getElementById('icon').src="./images/snow.png";
     }else if(obj.weather[0].main=='Thunderstorm'){
         document.getElementById('icon').src="./images/thunder.png";
+    }else if(obj.weather[0].main=='Haze'){
+        document.getElementById('icon').src="./images/haze.png";
     }
 }
 function setDetails(obj){

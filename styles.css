@@ -193,13 +193,13 @@ h5{
     .container.searchDiv{
         width: 100%;
     }
-    .card>h4{
+    /* .card>h4{
         font-size: 3rem;
         font-weight: 500;
         margin: 10px;
         padding: 0;
         display: none;
-    }
+    } */
     #other-img{
         width: 35px;
     }
